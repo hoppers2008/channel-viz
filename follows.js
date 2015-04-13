@@ -174,7 +174,7 @@
 									// Define and Render Y Axis (Datastream Values)
 									var yAxis = new Rickshaw.Graph.Axis.Y( {
 										graph: graph,
-										orientation: 'left',
+									//	orientation: 'left',
 										tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
 										ticksTreatment: ticksTreatment
 									});
