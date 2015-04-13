@@ -165,7 +165,7 @@
 									var ticksTreatment = 'glow';
 
 									// Define and Render X Axis (Time Values)
-									var xAxis = new Rickshaw.Graph.Axis.Time( {
+									var xAxis = new Rickshaw.Graph.Axis.X({ //Time( {
 										graph: graph,
 										ticksTreatment: ticksTreatment
 									});
