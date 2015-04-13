@@ -83,7 +83,7 @@
 					var updated = new Date;
 					updated = updated.parseISO(datastream.at);
 					var diff = null;
-					if(duration == '6hours') diff = 21600000;
+					if(duration == '12hours') diff = 21600000;
 					 if(duration == '1day') diff = 86400000;
 					 if(duration == '1week') diff = 604800000;
 					 if(duration == '1month') diff = 2628000000;
@@ -148,7 +148,7 @@
 										element: document.querySelector('#graph-' + feedId + '-' + datastream.id),
 										width: 600,
 										height: 200,
-										renderer: 'area',
+										renderer: 'bar',
 										min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										padding: {
@@ -324,7 +324,7 @@
 
 					$('#feed-' + data.id + ' .duration-hour').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '6hours', 30);
+						updateFeeds(data.id, thisFeedDatastreams, '12hours', 30);
 						return false;
 					});
 
@@ -356,7 +356,7 @@
 					if(dataDuration != '' && dataInterval != 0) {
 						updateFeeds(data.id, thisFeedDatastreams, dataDuration, dataInterval);
 					} else {
-						updateFeeds(data.id, thisFeedDatastreams, '6hours', 30);
+						updateFeeds(data.id, thisFeedDatastreams, '12hours', 30);
 					}
 				} else {
 					// Duplicate Example to Build Feed UI
